@@ -54,12 +54,12 @@
     <section class="category-strip" aria-label="Product categories">
       <button class="category active" data-filter="all">All Products</button>
       <button class="category" data-filter="hydraulic">Hydraulic Fluid</button>
-      <button class="category" data-filter="batteries">All Batteries</button>
-      <button class="category" data-filter="standard-auto">Standard Auto</button>
-      <button class="category" data-filter="agm-auto">AGM Auto</button>
-      <button class="category" data-filter="heavy-truck">Heavy-Duty Truck</button>
-      <button class="category" data-filter="golf-cart">Golf Cart</button>
-      <button class="category" data-filter="marine-deep-cycle">Marine & Deep Cycle</button>
+      <a class="category" href="/category.html?category=batteries">All Batteries</a>
+      <a class="category" href="/category.html?category=standard-auto">Standard Auto</a>
+      <a class="category" href="/category.html?category=agm-auto">AGM Auto</a>
+      <a class="category" href="/category.html?category=heavy-truck">Heavy-Duty Truck</a>
+      <a class="category" href="/category.html?category=golf-cart">Golf Cart</a>
+      <a class="category" href="/category.html?category=marine-deep-cycle">Marine & Deep Cycle</a>
       <button class="category" data-filter="oil">Engine Oil</button>
       <button class="category" data-filter="def">DEF Fluid</button>
     </section>
@@ -107,11 +107,12 @@
       <label>Company<input name="company" autocomplete="organization"></label>
       <label>Email<input name="email" type="email" required autocomplete="email"></label>
       <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
-      <label>Notes<textarea name="notes" rows="3" placeholder="Quantities, delivery needs, preferred brandsâ€¦"></textarea></label>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Quantities, delivery needs, preferred brands..."></textarea></label>
       <button class="button primary full" type="submit">Email Pricing Request</button>
       <small>This opens your email app with the request details. Online checkout will be added later.</small>
     </form>
   </aside>
+  <script src="/catalog-data.js" defer></script>
   <script src="/app.js" defer></script>
 </body>
 </html>
