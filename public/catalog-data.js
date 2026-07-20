@@ -1,6 +1,9 @@
 window.catalogProducts = [
-  { id:"hydraulic-aw32", category:"hydraulic", name:"AW-32 Hydraulic Fluid", format:"Pails & drums", description:"General-purpose anti-wear hydraulic fluid for mobile and industrial equipment." },
-  { id:"hydraulic-aw46", category:"hydraulic", name:"AW-46 Hydraulic Fluid", format:"Pails & drums", description:"Reliable wear protection and oxidation stability for higher-load hydraulic systems." },
+  { id:"hydraulic-80565-14305", category:"hydraulic", name:"CAM2 PROMAX AW 32 Hydraulic Fluid", format:"5-gallon pail | SKU 80565-14305", description:"AW 32 hydraulic fluid for mobile and industrial equipment." },
+  { id:"hydraulic-80565-14405", category:"hydraulic", name:"CAM2 PROMAX AW 46 Hydraulic Fluid", format:"5-gallon pail | SKU 80565-14405", description:"AW 46 hydraulic fluid for higher-load hydraulic systems." },
+  { id:"hydraulic-80565-14505", category:"hydraulic", name:"CAM2 PROMAX AW 68 Hydraulic Fluid", format:"5-gallon pail | SKU 80565-14505", description:"AW 68 hydraulic fluid for equipment requiring a higher-viscosity grade." },
+  { id:"hydraulic-80565-19905", category:"hydraulic", name:"CAM2 Agricultural Hydraulic Fluid", format:"5-gallon pail | SKU 80565-19905", description:"Agricultural hydraulic fluid for farm and off-road equipment." },
+  { id:"hydraulic-80565-16505", category:"hydraulic", name:"CAM2 PROMAX Premium Tractor J20C Hydraulic Fluid", format:"5-gallon pail | SKU 80565-16505", description:"Premium J20C tractor hydraulic fluid for agricultural equipment." },
   { id:"battery-sli31sa", category:"batteries", subcategory:"heavy-truck", name:"12V Group 31 starting battery", format:"SKU SLI31SA", description:"Standard flooded, 18-month class." },
   { id:"battery-sli31pa", category:"batteries", subcategory:"heavy-truck", name:"12V Group 31P starting battery", format:"SKU SLI31PA", description:"Standard flooded, 18-month class." },
   { id:"battery-sli31agm", category:"batteries", subcategory:"heavy-truck", name:"12V Group 31 AGM battery", format:"SKU SLI31AGM", description:"AGM, 48-month class." },
@@ -75,8 +78,12 @@ window.catalogProducts = [
   { id:"battery-sli124rm", category:"batteries", subcategory:"standard-auto", name:"12V Group 124R premium battery", format:"SKU SLI124RM", description:"Flooded automotive." },
   { id:"oil-diesel", category:"oil", name:"Heavy-Duty Diesel Oil", format:"Jugs, pails & drums", description:"Engine protection for diesel fleets, off-road equipment and demanding duty cycles." },
   { id:"oil-gasoline", category:"oil", name:"Gasoline Engine Oil", format:"Cases & bulk", description:"Multi-grade motor oil options for passenger vehicles and gasoline-powered equipment." },
-  { id:"def-jug", category:"def", name:"Diesel Exhaust Fluid", format:"2.5-gallon jugs", description:"High-purity DEF for SCR-equipped diesel vehicles and equipment." },
-  { id:"def-bulk", category:"def", name:"Bulk DEF Supply", format:"Drums, totes & bulk", description:"Volume DEF solutions for fleets, shops, farms and industrial operations." }
+  { id:"oil-550045126", category:"oil", name:"Shell Rotella T4 Triple Protection 15W-40 CK-4", format:"Case of 3 one-gallon jugs | SKU 550045126", description:"Heavy-duty 15W-40 CK-4 diesel motor oil." },
+  { id:"oil-550045128", category:"oil", name:"Shell Rotella T4 Triple Protection 15W-40 CK-4", format:"5-gallon pail | SKU 550045128", description:"Heavy-duty 15W-40 CK-4 diesel motor oil." },
+  { id:"oil-80565-32031", category:"oil", name:"CAM2 Super HD Synthetic Blend 15W-40 CK-4", format:"Case of 3 one-gallon jugs | SKU 80565-32031", description:"Synthetic-blend 15W-40 CK-4 heavy-duty motor oil." },
+  { id:"def-80565-80074", category:"def", name:"CAM2 Blue Blood Diesel Exhaust Fluid", format:"Case of 2 2.5-gallon jugs | SKU 80565-80074", description:"Diesel exhaust fluid for SCR-equipped vehicles and equipment." },
+  { id:"def-80565-80055", category:"def", name:"CAM2 Blue Blood Diesel Exhaust Fluid", format:"55-gallon drum | SKU 80565-80055", description:"Volume DEF supply for fleets, shops, farms, and industrial operations." },
+  { id:"def-80565-80000", category:"def", name:"CAM2 Blue Blood Diesel Exhaust Fluid", format:"275-gallon tote | SKU 80565-80000", description:"Bulk DEF supply for fleets and high-volume operations." }
 ];
 
 window.categoryNames = { hydraulic:"Hydraulic Fluid", batteries:"Batteries", oil:"Engine Oil", def:"DEF Fluid" };
