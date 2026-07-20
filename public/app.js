@@ -72,7 +72,7 @@ const products = [
   { id:"battery-sli78m", category:"batteries", subcategory:"standard-auto", name:"12V Group 78 premium battery", format:"SKU SLI78M", description:"Flooded automotive." },
   { id:"battery-sli86m", category:"batteries", subcategory:"standard-auto", name:"12V Group 86 premium battery", format:"SKU SLI86M", description:"Flooded automotive." },
   { id:"battery-sli94rh7m", category:"batteries", subcategory:"standard-auto", name:"12V Group 94R / H7 premium battery", format:"SKU SLI94RH7M", description:"Flooded automotive." },
-  { id:"battery-sli124rm", category:"batteries", subcategory:"standard-auto", name:"12V Group 124R premium battery", format:"SKU SLI124RM", description:"Flooded automotive." }
+  { id:"battery-sli124rm", category:"batteries", subcategory:"standard-auto", name:"12V Group 124R premium battery", format:"SKU SLI124RM", description:"Flooded automotive." },
   { id:"oil-diesel", category:"oil", name:"Heavy-Duty Diesel Oil", format:"Jugs, pails & drums", description:"Engine protection for diesel fleets, off-road equipment and demanding duty cycles." },
   { id:"oil-gasoline", category:"oil", name:"Gasoline Engine Oil", format:"Cases & bulk", description:"Multi-grade motor oil options for passenger vehicles and gasoline-powered equipment." },
   { id:"def-jug", category:"def", name:"Diesel Exhaust Fluid", format:"2.5-gallon jugs", description:"High-purity DEF for SCR-equipped diesel vehicles and equipment." },
