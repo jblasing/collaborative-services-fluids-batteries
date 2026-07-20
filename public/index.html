@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Industrial fluids, batteries, engine oil and DEF supplied by Collaborative Services in New Waverly, Texas.">
+  <title>Collaborative Services | Fluids & Batteries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="announcement">Commercial supply for Greater Houston & surrounding communities</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Collaborative Services Fluids and Batteries home">
+      <img src="https://lirp.cdn-website.com/8408b703/dms3rep/multi/opt/Screenshot_2025-12-12_at_3.24.33_PM-removebg-preview-1920w.png" alt="Collaborative Services">
+      <span><b>Fluids</b> & Batteries</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="#products">Products</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+      <button class="cart-button" type="button" data-open-cart>Request List <span data-cart-count>0</span></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Reliable supply. Local support.</p>
+        <h1>Keep your equipment <em>moving.</em></h1>
+        <p class="hero-lede">Hydraulic fluids, engine oils, batteries and DEF for contractors, fleets, farms and facilities across Southeast Texas.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#products">Browse Products</a>
+          <a class="button ghost" href="tel:+19362282916">Call (936) 228-2916</a>
+        </div>
+        <ul class="trust-list" aria-label="Service benefits">
+          <li>Local pickup</li><li>Commercial quantities</li><li>Product guidance</li>
+        </ul>
+      </div>
+      <div class="hero-panel" aria-label="Available product categories">
+        <div class="gauge"><span>4</span><small>core categories</small></div>
+        <div class="hero-grid">
+          <article><span>01</span><b>Hydraulic Fluid</b></article>
+          <article><span>02</span><b>Batteries</b></article>
+          <article><span>03</span><b>Engine Oil</b></article>
+          <article><span>04</span><b>DEF</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Product categories">
+      <button class="category active" data-filter="all">All Products</button>
+      <button class="category" data-filter="hydraulic">Hydraulic Fluid</button>
+      <button class="category" data-filter="batteries">Batteries</button>
+      <button class="category" data-filter="oil">Engine Oil</button>
+      <button class="category" data-filter="def">DEF Fluid</button>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Product catalog</p><h2>Built for demanding work</h2></div>
+        <p>Initial categories are ready for product brands, sizes, pricing and availability as inventory is finalized.</p>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <section id="why-us" class="why-us">
+      <div>
+        <p class="eyebrow">Why Collaborative Services</p>
+        <h2>A supplier that understands uptime.</h2>
+      </div>
+      <div class="benefits">
+        <article><b>01</b><h3>Local inventory</h3><p>Convenient supply support from New Waverly for customers throughout Greater Houston.</p></article>
+        <article><b>02</b><h3>Real product guidance</h3><p>Talk with a local team when you need help choosing the right fluid, oil or battery.</p></article>
+        <article><b>03</b><h3>Commercial-ready</h3><p>Built to support individual purchases, recurring orders and bulk-volume requests as we grow.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-banner">
+      <div><p class="eyebrow">Need a product now?</p><h2>Send us your supply list.</h2><p>Build a request list from the catalog or speak directly with our team.</p></div>
+      <div class="contact-actions"><button class="button light" type="button" data-open-cart>Review Request List</button><a href="mailto:info@csllc-tx.com">info@csllc-tx.com</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><strong>Collaborative Services</strong><span>Fluids & Batteries</span></div>
+    <div><b>Visit</b><span>61 Winters Bayou Rd<br>New Waverly, TX 77358</span></div>
+    <div><b>Contact</b><a href="tel:+19362282916">(936) 228-2916</a><a href="mailto:info@csllc-tx.com">info@csllc-tx.com</a></div>
+    <div><b>Hours</b><span>Mondayâ€“Friday<br>9:00 AMâ€“5:00 PM</span></div>
+  </footer>
+
+  <div class="drawer-backdrop" data-close-cart></div>
+  <aside class="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
+    <div class="cart-head"><div><p class="eyebrow">Pricing request</p><h2 id="cart-title">Your product list</h2></div><button class="close" type="button" data-close-cart aria-label="Close request list">Ã—</button></div>
+    <div class="cart-items" data-cart-items></div>
+    <div class="cart-empty" data-cart-empty>Add products from the catalog to build your request.</div>
+    <form class="request-form" data-request-form>
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Company<input name="company" autocomplete="organization"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Quantities, delivery needs, preferred brandsâ€¦"></textarea></label>
+      <button class="button primary full" type="submit">Email Pricing Request</button>
+      <small>This opens your email app with the request details. Online checkout will be added later.</small>
+    </form>
+  </aside>
+  <script src="/app.js" defer></script>
+</body>
+</html>
+
