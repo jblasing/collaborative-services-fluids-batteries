@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: collaborative-services-fluids-batteries
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: npm start
+    autoDeploy: true
+
