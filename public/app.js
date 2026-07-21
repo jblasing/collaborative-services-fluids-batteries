@@ -13,7 +13,7 @@ function renderProducts(filter = "all") {
   grid.replaceChildren(...visible.map(product => {
     const card = document.createElement("article");
     card.className = "product-card";
-    card.innerHTML = `<div class="product-visual ${product.category}"><span class="product-tag">${product.subcategory ? batteryCategoryNames[product.subcategory] : categoryNames[product.category]}</span></div><div class="product-copy"><h3>${product.name}</h3><p>${product.description}</p><div class="product-meta"><span>${product.format}</span><span>Request pricing</span></div><button class="add-button" type="button">Add to Request</button></div>`;
+    card.innerHTML = `<div class="product-visual ${product.category}${product.image ? " has-image" : ""}">${product.image ? `<img src="${product.image}" alt="${product.name}" loading="lazy">` : ""}<span class="product-tag">${product.subcategory ? batteryCategoryNames[product.subcategory] : categoryNames[product.category]}</span></div><div class="product-copy"><h3>${product.name}</h3><p>${product.description}</p><div class="product-meta"><span>${product.format}</span><span>Request pricing</span></div><button class="add-button" type="button">Add to Request</button></div>`;
     card.querySelector("button").addEventListener("click", () => addToCart(product.id));
     return card;
   }));
