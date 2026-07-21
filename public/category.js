@@ -53,7 +53,7 @@ function render(query = "") {
     const card = document.createElement("article");
     card.className = "product-card";
     const added = cart.includes(product.id);
-    card.innerHTML = `<div class="product-visual batteries"><span class="product-tag">${batteryCategoryNames[product.subcategory]}</span></div><div class="product-copy"><h3>${product.name}</h3><p>${product.description}</p><div class="product-meta"><span>${product.format}</span><span>Request pricing</span></div><button class="add-button" type="button" ${added ? "disabled" : ""}>${added ? "Added" : "Add to Request"}</button></div>`;
+    card.innerHTML = `<div class="product-visual batteries${product.image ? " has-image" : ""}">${product.image ? `<img src="${product.image}" alt="${product.name}" loading="lazy">` : ""}<span class="product-tag">${batteryCategoryNames[product.subcategory]}</span></div><div class="product-copy"><h3>${product.name}</h3><p>${product.description}</p><div class="product-meta"><span>${product.format}</span><span>Request pricing</span></div><button class="add-button" type="button" ${added ? "disabled" : ""}>${added ? "Added" : "Add to Request"}</button></div>`;
     card.querySelector("button").addEventListener("click", event => addToRequest(product.id, event.currentTarget));
     return card;
   }));
