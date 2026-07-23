@@ -80,7 +80,8 @@ document.querySelector("[data-request-form]").addEventListener("submit", event =
   if (!cart.length) { alert("Add at least one product to your request list."); return; }
   const data = new FormData(event.currentTarget);
   const lines = cart.map(id => products.find(product => product.id === id)?.name).filter(Boolean);
-  const body = [`Name: ${data.get("name")}`, `Company: ${data.get("company") || "N/A"}`, `Email: ${data.get("email")}`, `Phone: ${data.get("phone") || "N/A"}`, "", "Products requested:", ...lines.map(line => `- ${line}`), "", `Notes: ${data.get("notes") || "None"}`].join("\n");
+  const smsConsent = data.get("smsConsent") === "yes";
+  const body = [`Name: ${data.get("name")}`, `Company: ${data.get("company") || "N/A"}`, `Email: ${data.get("email")}`, `Phone: ${data.get("phone") || "N/A"}`, `SMS consent: ${smsConsent ? "Yes - optional checkbox selected" : "No"}`, `Consent recorded: ${new Date().toISOString()}`, "", "Products requested:", ...lines.map(line => `- ${line}`), "", `Notes: ${data.get("notes") || "None"}`].join("\n");
   window.location.href = `mailto:info@csllc-tx.com?subject=${encodeURIComponent("Fluids & Batteries pricing request")}&body=${encodeURIComponent(body)}`;
 });
 

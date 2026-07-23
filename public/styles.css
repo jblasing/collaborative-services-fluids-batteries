@@ -19,3 +19,5 @@
   .catalog-hero{padding-top:48px}.category-products{padding-top:36px}
 }
 
+
+.sms-consent{grid-template-columns:auto 1fr!important;align-items:start;gap:10px!important;padding:12px;border:1px solid var(--line);border-radius:8px;background:#fff;text-transform:none!important;font-weight:500!important;line-height:1.5}.sms-consent input{width:18px;height:18px;margin:2px 0 0;padding:0}.sms-consent a,.footer-legal a{text-decoration:underline}.footer-legal{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}.legal-page{max-width:900px;margin:0 auto;padding:70px clamp(20px,6vw,88px)}.legal-page h1{font:800 clamp(48px,7vw,80px)/.95 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 18px}.legal-page h2{font:700 30px "Barlow Condensed",sans-serif;text-transform:uppercase;margin:38px 0 10px}.legal-page p,.legal-page li{color:var(--muted);line-height:1.75}.legal-page .effective{font-weight:700;color:var(--ink)}
