@@ -1,17 +1,25 @@
 const products = window.catalogProducts;
+const categoryNames = window.categoryNames;
 const batteryCategoryNames = window.batteryCategoryNames;
 const params = new URLSearchParams(window.location.search);
 const requestedCategory = params.get("category") || "batteries";
-const validCategories = new Set(["batteries", ...Object.keys(batteryCategoryNames)]);
+const batterySubcategories = new Set(Object.keys(batteryCategoryNames));
+const validCategories = new Set([...Object.keys(categoryNames), ...batterySubcategories]);
 const category = validCategories.has(requestedCategory) ? requestedCategory : "batteries";
 
 const pageDetails = {
+  hydraulic: ["Hydraulic Fluid", "Hydraulic fluids for mobile, industrial, agricultural, and off-road equipment."],
   batteries: ["All Batteries", "Search our complete battery catalog by product name, group size, specification, or SKU."],
   "standard-auto": ["Standard Auto Batteries", "Flooded automotive batteries across common group sizes."],
   "agm-auto": ["AGM Auto Batteries", "AGM automotive and dual-purpose batteries for demanding applications."],
   "heavy-truck": ["Heavy-Duty Truck Batteries", "Commercial flooded and AGM batteries for trucks and heavy equipment."],
   "golf-cart": ["Golf Cart Batteries", "Standard, AGM, lead deep-cycle, and lithium golf-cart options."],
-  "marine-deep-cycle": ["Marine & Deep-Cycle Batteries", "Starting, dual-purpose, deep-cycle, and AGM marine batteries."]
+  "marine-deep-cycle": ["Marine & Deep-Cycle Batteries", "Starting, dual-purpose, deep-cycle, and AGM marine batteries."],
+  oil: ["Engine Oil", "Passenger-car and heavy-duty engine oils across multiple viscosities and package sizes."],
+  transmission: ["Transmission Fluid", "Automatic transmission fluids for multi-vehicle, Dexron, and Mercon applications."],
+  brake: ["Brake Fluid", "DOT 3 brake fluid in shop and commercial package sizes."],
+  "power-steering": ["Power Steering Fluid", "Power steering fluid for compatible automotive and light-duty systems."],
+  def: ["DEF Fluid", "Diesel exhaust fluid for vehicles, fleets, and bulk-volume operations."]
 };
 
 const [title, description] = pageDetails[category];
@@ -20,9 +28,10 @@ document.querySelector("[data-category-title]").textContent = title;
 document.querySelector("[data-category-description]").textContent = description;
 document.querySelector(`[data-category-link="${category}"]`)?.classList.add("active");
 
-const categoryProducts = products.filter(product =>
-  product.category === "batteries" && (category === "batteries" || product.subcategory === category)
-);
+const categoryProducts = products.filter(product => {
+  if (batterySubcategories.has(category)) return product.subcategory === category;
+  return product.category === category;
+});
 const grid = document.querySelector("#category-product-grid");
 const search = document.querySelector("#catalog-search");
 const resultCount = document.querySelector("[data-result-count]");
@@ -53,7 +62,8 @@ function render(query = "") {
     const card = document.createElement("article");
     card.className = "product-card";
     const added = cart.includes(product.id);
-    card.innerHTML = `<div class="product-visual batteries${product.image ? " has-image" : ""}">${product.image ? `<img src="${product.image}" alt="${product.name}" loading="lazy">` : ""}<span class="product-tag">${batteryCategoryNames[product.subcategory]}</span></div><div class="product-copy"><h3>${product.name}</h3><p>${product.description}</p><div class="product-meta"><span>${product.format}</span><span>Request pricing</span></div><button class="add-button" type="button" ${added ? "disabled" : ""}>${added ? "Added" : "Add to Request"}</button></div>`;
+    const tag = product.subcategory ? batteryCategoryNames[product.subcategory] : categoryNames[product.category];
+    card.innerHTML = `<div class="product-visual ${product.category}${product.image ? " has-image" : ""}">${product.image ? `<img src="${product.image}" alt="${product.name}" loading="lazy">` : ""}<span class="product-tag">${tag}</span></div><div class="product-copy"><h3>${product.name}</h3><p>${product.description}</p><div class="product-meta"><span>${product.format}</span><span>Request pricing</span></div><button class="add-button" type="button" ${added ? "disabled" : ""}>${added ? "Added" : "Add to Request"}</button></div>`;
     card.querySelector("button").addEventListener("click", event => addToRequest(product.id, event.currentTarget));
     return card;
   }));

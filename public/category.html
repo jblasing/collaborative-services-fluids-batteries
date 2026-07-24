@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search the Collaborative Services battery catalog by application, product name, and SKU.">
-  <title>Battery Catalog | Collaborative Services</title>
+  <meta name="description" content="Search the Collaborative Services product catalog by category, product name, specification, and SKU.">
+  <title>Product Catalog | Collaborative Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,30 +26,36 @@
 
   <main>
     <section class="catalog-hero">
-      <p class="eyebrow">Battery catalog</p>
-      <h1 data-category-title>Battery Products</h1>
+      <p class="eyebrow">Product catalog</p>
+      <h1 data-category-title>Products</h1>
       <p data-category-description>Search products by name, group size, specification, or SKU.</p>
     </section>
 
-    <nav class="category-strip catalog-category-links" aria-label="Battery categories">
+    <nav class="category-strip catalog-category-links" aria-label="Product categories">
+      <a class="category" data-category-link="hydraulic" href="/category.html?category=hydraulic">Hydraulic Fluid</a>
       <a class="category" data-category-link="batteries" href="/category.html?category=batteries">All Batteries</a>
       <a class="category" data-category-link="standard-auto" href="/category.html?category=standard-auto">Standard Auto</a>
       <a class="category" data-category-link="agm-auto" href="/category.html?category=agm-auto">AGM Auto</a>
       <a class="category" data-category-link="heavy-truck" href="/category.html?category=heavy-truck">Heavy-Duty Truck</a>
       <a class="category" data-category-link="golf-cart" href="/category.html?category=golf-cart">Golf Cart</a>
       <a class="category" data-category-link="marine-deep-cycle" href="/category.html?category=marine-deep-cycle">Marine & Deep Cycle</a>
+      <a class="category" data-category-link="oil" href="/category.html?category=oil">Engine Oil</a>
+      <a class="category" data-category-link="transmission" href="/category.html?category=transmission">Transmission Fluid</a>
+      <a class="category" data-category-link="brake" href="/category.html?category=brake">Brake Fluid</a>
+      <a class="category" data-category-link="power-steering" href="/category.html?category=power-steering">Power Steering Fluid</a>
+      <a class="category" data-category-link="def" href="/category.html?category=def">DEF Fluid</a>
     </nav>
 
     <section class="products-section category-products">
       <div class="catalog-tools">
         <label class="catalog-search-label" for="catalog-search">Search this category</label>
-        <input id="catalog-search" class="catalog-search" type="search" placeholder="Search by product name, group size, or SKU" autocomplete="off">
+        <input id="catalog-search" class="catalog-search" type="search" placeholder="Search by product name, specification, or SKU" autocomplete="off">
         <p class="catalog-result-count" aria-live="polite" data-result-count></p>
       </div>
       <div id="category-product-grid" class="product-grid"></div>
       <div class="catalog-empty" data-catalog-empty hidden>
         <h2>No matching products</h2>
-        <p>Try a different product name, group size, or SKU.</p>
+        <p>Try a different product name, specification, or SKU.</p>
       </div>
     </section>
   </main>
