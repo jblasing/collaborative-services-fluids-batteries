@@ -3,108 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Industrial fluids, batteries, engine oil, transmission fluid, brake fluid, power steering fluid and DEF supplied by Collaborative Services in New Waverly, Texas.">
+  <meta name="description" content="Shop batteries, engine oil, hydraulic fluid, transmission fluid, brake fluid, power steering fluid and DEF from Collaborative Services in New Waverly, Texas.">
   <title>Collaborative Services | Fluids & Batteries</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-  <div class="announcement">Commercial supply for Greater Houston & surrounding communities</div>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Collaborative Services Fluids and Batteries home">
-      <img src="https://raw.githubusercontent.com/jblasing/company-assets/main/collaborative-services-fluids-batteries-logo-concept.png" alt="Collaborative Services">
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#products">Products</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#contact">Contact</a>
-      <button class="cart-button" type="button" data-open-cart>Request List <span data-cart-count>0</span></button>
+<body class="storefront">
+  <div class="retail-utility">
+    <span>Local pickup in New Waverly, TX</span>
+    <span>Commercial & fleet supply</span>
+    <a href="tel:+19362282916">Call (936) 228-2916</a>
+  </div>
+
+  <header class="retail-header">
+    <div class="retail-header-main">
+      <a class="retail-brand" href="#top" aria-label="Collaborative Services Fluids and Batteries home">
+        <img src="https://raw.githubusercontent.com/jblasing/company-assets/main/collaborative-services-fluids-batteries-logo-concept.png" alt="Collaborative Services Fluids & Batteries">
+      </a>
+      <form class="retail-search" data-catalog-search-form role="search">
+        <label class="sr-only" for="store-search">Search products</label>
+        <input id="store-search" type="search" placeholder="Search products, categories or SKU" autocomplete="off" data-catalog-search>
+        <button type="submit">Search</button>
+      </form>
+      <button class="retail-menu-toggle" type="button" aria-expanded="false" aria-controls="department-nav">Departments</button>
+      <button class="retail-request" type="button" data-open-cart>
+        <span>Request List</span><b data-cart-count>0</b>
+      </button>
+    </div>
+    <nav id="department-nav" class="department-nav" aria-label="Product departments">
+      <button class="active" type="button" data-filter="all">All Products</button>
+      <button type="button" data-filter="batteries">Batteries</button>
+      <button type="button" data-filter="oil">Engine Oil</button>
+      <button type="button" data-filter="hydraulic">Hydraulic Fluid</button>
+      <button type="button" data-filter="transmission">Transmission Fluid</button>
+      <button type="button" data-filter="brake">Brake Fluid</button>
+      <button type="button" data-filter="power-steering">Power Steering</button>
+      <button type="button" data-filter="def">DEF</button>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Reliable supply. Local support.</p>
-        <h1>Keep your equipment <em>moving.</em></h1>
-        <p class="hero-lede">Hydraulic fluids, engine oils, batteries, transmission fluid, brake fluid, power steering fluid and DEF for contractors, fleets, farms and facilities across Southeast Texas.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#products">Browse Products</a>
-          <a class="button ghost" href="tel:+19362282916">Call (936) 228-2916</a>
+    <section class="retail-hero">
+      <div class="retail-hero-copy">
+        <p class="retail-kicker">Fluids, batteries & shop essentials</p>
+        <h1>Keep the job moving.</h1>
+        <p>Commercial-grade products for trucks, equipment, fleets, farms and facilities across Southeast Texas.</p>
+        <div class="retail-hero-actions">
+          <a class="retail-button retail-button-primary" href="#departments">Shop Departments</a>
+          <button class="retail-button retail-button-secondary" type="button" data-open-cart>Build a Request List</button>
         </div>
-        <ul class="trust-list" aria-label="Service benefits">
-          <li>Local pickup</li><li>Commercial quantities</li><li>Product guidance</li>
-        </ul>
+        <div class="retail-hero-help"><b>Not sure what you need?</b> Call our local team at <a href="tel:+19362282916">(936) 228-2916</a>.</div>
       </div>
-      <div class="hero-panel" aria-label="Available product categories">
-        <div class="gauge"><span>7</span><small>product categories</small></div>
-        <div class="hero-grid">
-          <article><span>01</span><b>Hydraulic Fluid</b></article>
-          <article><span>02</span><b>Batteries</b></article>
-          <article><span>03</span><b>Engine Oil</b></article>
-          <article><span>04</span><b>Transmission Fluid</b></article>
-          <article><span>05</span><b>Brake Fluid</b></article>
-          <article><span>06</span><b>Power Steering Fluid</b></article>
-          <article><span>07</span><b>DEF</b></article>
-        </div>
+      <div class="retail-hero-products" aria-label="Popular product departments">
+        <a href="/category.html?category=batteries" class="hero-product-card hero-battery">
+          <span>Shop Batteries</span>
+          <img src="https://raw.githubusercontent.com/jblasing/company-assets/main/12V%20Group%2024%20battery.jpg" alt="Automotive battery">
+        </a>
+        <a href="/category.html?category=oil" class="hero-product-card hero-oil">
+          <span>Shop Engine Oil</span>
+          <img src="https://raw.githubusercontent.com/jblasing/company-assets/main/Shell%20Rotella%20T4%20Triple%20Protection%2015W-40%20CK-4.jpg" alt="Engine oil">
+        </a>
       </div>
     </section>
 
-    <section class="category-strip" aria-label="Product categories">
-      <button class="category active" data-filter="all">All Products</button>
-      <a class="category" href="/category.html?category=hydraulic">Hydraulic Fluid</a>
-      <a class="category" href="/category.html?category=batteries">All Batteries</a>
-      <a class="category" href="/category.html?category=standard-auto">Standard Auto</a>
-      <a class="category" href="/category.html?category=agm-auto">AGM Auto</a>
-      <a class="category" href="/category.html?category=heavy-truck">Heavy-Duty Truck</a>
-      <a class="category" href="/category.html?category=golf-cart">Golf Cart</a>
-      <a class="category" href="/category.html?category=marine-deep-cycle">Marine & Deep Cycle</a>
-      <a class="category" href="/category.html?category=oil">Engine Oil</a>
-      <a class="category" href="/category.html?category=transmission">Transmission Fluid</a>
-      <a class="category" href="/category.html?category=brake">Brake Fluid</a>
-      <a class="category" href="/category.html?category=power-steering">Power Steering Fluid</a>
-      <a class="category" href="/category.html?category=def">DEF Fluid</a>
+    <section class="retail-benefits" aria-label="Store services">
+      <article><b>Local Pickup</b><span>Convenient pickup from New Waverly</span></article>
+      <article><b>Commercial Quantities</b><span>Case, pail, drum and tote options</span></article>
+      <article><b>Product Guidance</b><span>Talk with a local supply specialist</span></article>
+      <article><b>Fleet & Recurring Orders</b><span>Built for ongoing business needs</span></article>
     </section>
 
-    <section id="products" class="products-section">
-      <div class="section-heading">
-        <div><p class="eyebrow">Product catalog</p><h2>Built for demanding work</h2></div>
-        <p>Browse our current fluids and battery selection by category and application. Contact us for pricing and availability.</p>
+    <section id="departments" class="departments-section">
+      <div class="retail-section-heading">
+        <div><p>Shop by department</p><h2>Find what keeps you running</h2></div>
+        <a href="#products">View all products</a>
       </div>
-      <div id="product-grid" class="product-grid"></div>
-    </section>
-
-    <section id="why-us" class="why-us">
-      <div>
-        <p class="eyebrow">Why Collaborative Services</p>
-        <h2>A supplier that understands uptime.</h2>
-      </div>
-      <div class="benefits">
-        <article><b>01</b><h3>Local inventory</h3><p>Convenient supply support from New Waverly for customers throughout Greater Houston.</p></article>
-        <article><b>02</b><h3>Real product guidance</h3><p>Talk with a local team when you need help choosing the right fluid, oil or battery.</p></article>
-        <article><b>03</b><h3>Commercial-ready</h3><p>Built to support individual purchases, recurring orders and bulk-volume requests as we grow.</p></article>
+      <div class="department-grid">
+        <a class="department-card" href="/category.html?category=batteries"><span class="department-art"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/12V%20Group%2024%20battery.jpg" alt=""></span><b>Batteries</b><small>Auto, truck, marine & golf cart</small></a>
+        <a class="department-card" href="/category.html?category=oil"><span class="department-art"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/CAM2%20Synavex%20Full%20Synthetic%20SAE%200W-20%20SQGF7A%20Motor%20Oil.png" alt=""></span><b>Engine Oil</b><small>Passenger car & heavy-duty</small></a>
+        <a class="department-card" href="/category.html?category=hydraulic"><span class="department-art"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/CAM2%20PROMAX%20AW%2032%20Hydraulic%20Fluid.webp" alt=""></span><b>Hydraulic Fluid</b><small>Equipment & industrial grades</small></a>
+        <a class="department-card" href="/category.html?category=transmission"><span class="department-art"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/CAM2%20Dexron%20VI%20Multi-Vehicle%20Full%20Synthetic%20ATF.png" alt=""></span><b>Transmission Fluid</b><small>Dexron, Mercon & multi-vehicle</small></a>
+        <a class="department-card" href="/category.html?category=brake"><span class="department-art"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/CAM2%20Super%20HD%20DOT%203%20Brake%20Fluid%20Quart.jpg" alt=""></span><b>Brake Fluid</b><small>DOT 3 shop and case quantities</small></a>
+        <a class="department-card" href="/category.html?category=power-steering"><span class="department-art"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/CAM2%20Power%20Steering%20Fluid.png" alt=""></span><b>Power Steering</b><small>Automotive steering fluid</small></a>
+        <a class="department-card" href="/category.html?category=def"><span class="department-art department-art-text">DEF</span><b>Diesel Exhaust Fluid</b><small>Jugs, drums & bulk totes</small></a>
       </div>
     </section>
 
-    <section id="contact" class="contact-banner">
-      <div><p class="eyebrow">Need a product now?</p><h2>Send us your supply list.</h2><p>Build a request list from the catalog or speak directly with our team.</p></div>
-      <div class="contact-actions"><button class="button light" type="button" data-open-cart>Review Request List</button><a href="mailto:info@csllc-tx.com">info@csllc-tx.com</a></div>
+    <section class="commercial-banner">
+      <div><p>Commercial supply</p><h2>Ordering for a fleet, farm or facility?</h2><span>Send us your list for product availability, volume options and local support.</span></div>
+      <button class="retail-button retail-button-light" type="button" data-open-cart>Start a Commercial Request</button>
+    </section>
+
+    <section id="products" class="retail-products-section">
+      <div class="retail-section-heading">
+        <div><p>Featured catalog</p><h2>Popular products</h2></div>
+        <span data-product-count aria-live="polite"></span>
+      </div>
+      <div id="product-grid" class="product-grid retail-product-grid"></div>
+      <div class="catalog-empty retail-empty" data-store-empty hidden>
+        <h2>No matching products</h2>
+        <p>Try another product name, SKU or department.</p>
+      </div>
+      <div class="retail-show-all-wrap"><button class="retail-button retail-button-dark" type="button" data-show-all>View Full Catalog</button></div>
+    </section>
+
+    <section id="why-us" class="retail-why">
+      <div class="retail-section-heading"><div><p>Why Collaborative Services</p><h2>Local service. Commercial capability.</h2></div></div>
+      <div class="retail-why-grid">
+        <article><span>01</span><h3>Right product, right application</h3><p>Get help choosing the appropriate battery, oil or fluid for your equipment and operating needs.</p></article>
+        <article><span>02</span><h3>Package sizes that fit the job</h3><p>Order by the case or scale up to pails, drums and totes for higher-volume operations.</p></article>
+        <article><span>03</span><h3>A local team you can reach</h3><p>Work with people in New Waverly who understand that downtime costs money.</p></article>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-brand"><strong>Collaborative Services</strong><span>Fluids & Batteries</span></div>
-    <div><b>Visit</b><span>61 Winters Bayou Rd<br>New Waverly, TX 77358</span></div>
-    <div><b>Contact</b><a href="tel:+19362282916">(936) 228-2916</a><a href="mailto:info@csllc-tx.com">info@csllc-tx.com</a></div>
-    <div><b>Hours</b><span>Monday-Friday<br>9:00 AM-5:00 PM</span></div>
+  <footer class="retail-footer">
+    <div class="retail-footer-brand"><img src="https://raw.githubusercontent.com/jblasing/company-assets/main/collaborative-services-fluids-batteries-logo-concept.png" alt="Collaborative Services Fluids & Batteries"><p>Industrial fluids and batteries for Southeast Texas.</p></div>
+    <div><b>Shop</b><a href="/category.html?category=batteries">Batteries</a><a href="/category.html?category=oil">Engine Oil</a><a href="/category.html?category=hydraulic">Hydraulic Fluid</a><a href="/category.html?category=transmission">Transmission Fluid</a></div>
+    <div><b>Customer Service</b><button type="button" data-open-cart>Request Pricing</button><a href="tel:+19362282916">(936) 228-2916</a><a href="mailto:info@csllc-tx.com">info@csllc-tx.com</a></div>
+    <div><b>Store Information</b><span>61 Winters Bayou Rd<br>New Waverly, TX 77358</span><span>Monday-Friday<br>9:00 AM-5:00 PM</span></div>
   </footer>
 
   <div class="drawer-backdrop" data-close-cart></div>
   <aside class="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
-    <div class="cart-head"><div><p class="eyebrow">Pricing request</p><h2 id="cart-title">Your product list</h2></div><button class="close" type="button" data-close-cart aria-label="Close request list">Ã—</button></div>
+    <div class="cart-head"><div><p class="eyebrow">Pricing request</p><h2 id="cart-title">Your product list</h2></div><button class="close" type="button" data-close-cart aria-label="Close request list">&times;</button></div>
     <div class="cart-items" data-cart-items></div>
     <div class="cart-empty" data-cart-empty>Add products from the catalog to build your request.</div>
     <form class="request-form" data-request-form>
@@ -121,4 +145,3 @@
   <script src="/app.js" defer></script>
 </body>
 </html>
-
